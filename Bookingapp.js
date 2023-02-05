@@ -16,8 +16,23 @@ function onsubmit(e){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(`${nameInput.value}:${emailInput.value}`));
         userList.appendChild(li);
-        localStorage.setItem('Name',nameInput.value);
-        localStorage.setItem('Email',emailInput.value);
+
+        let name = nameInput.value;
+        let email = emailInput.value;
+        
+        const userdetails = {
+            name,
+            email
+        }
+
+         
+
+        
+
+        
+       localStorage.setItem('UserDetails',JSON.stringify(userdetails));
+       
+        
         
 
         //Clear field

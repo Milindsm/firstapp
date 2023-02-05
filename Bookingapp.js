@@ -25,12 +25,8 @@ function onsubmit(e){
             email
         }
 
-         
-
         
-
-        
-       localStorage.setItem('UserDetails',JSON.stringify(userdetails));
+       localStorage.setItem(emailInput.value,JSON.stringify(userdetails));
        
         
         

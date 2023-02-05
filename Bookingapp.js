@@ -55,6 +55,12 @@ function onsubmit(e){
         
     }
 
+    var editbtn = document.createElement('editbtm');
+    editbtn.className ='editbtn';
+    editbtn.appendChild(document.createTextNode('Edit'));
+    li.appendChild(editbtn);
+
+
     userList.appendChild(li);
     
      

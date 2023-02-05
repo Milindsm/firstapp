@@ -26,6 +26,7 @@ function addItem(e){
     //add text node with input value
     li.appendChild(document.createTextNode(newItem));
     li.appendChild(document.createTextNode(" "+decr));
+    
 
     //create del button element
     var dltbtn = document.createElement('button');
@@ -44,7 +45,7 @@ function addItem(e){
     editbtn.appendChild(document.createTextNode('edit'));
     li.appendChild(editbtn);
 
-
+    
     itemlist.appendChild(li);
 }
 
@@ -54,9 +55,11 @@ function removeItem(e){
         if(confirm('Are you sure?')){
             var li  = e.target.parentElement;
             itemlist.removeChild(li);
+            
         }
     }
 }
+
 
 
 //Filter Item

@@ -62,6 +62,16 @@
     border-radius: 5px;
     margin: 5px 0;
   }
+  .dltbtn{
+    background-color:rgb(169, 169, 235);
+    color: red;
+    font-weight: bold;
+    border: none;
+    text-align: right;
+    padding: 5px 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+  }
   
   .btn:hover {
     background: blue;

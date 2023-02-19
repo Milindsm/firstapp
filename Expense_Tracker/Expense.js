@@ -67,6 +67,7 @@ symbol =localStorage.getItem("symbol");
 listOfTransactions =JSON.parse(setItem("list"));
 
 currentBalance = Number( localStorage.getItem("balance"));
+
 }
 
 
@@ -139,5 +140,17 @@ saveButton.addEventListener("click",() =>{
     tnxAmountHolder.value = "";
     render();
     saveData();
+
+    axios.post('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction',transaction)
+    .then(res=>res)
+    .catch(error=>console.log(error));
+
+
+    
     
 })
+
+
+
+
+

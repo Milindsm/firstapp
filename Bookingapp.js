@@ -63,8 +63,10 @@ function onsubmit(e){
 
     userList.appendChild(li);
     
-     
-       localStorage.setItem(emailInput.value,JSON.stringify(userdetails));
+     axios.post("https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Userdetails",userdetails)
+     .then(res=>showOutput(res))
+    .catch(err=>console.log.error(err));
+       //localStorage.setItem(emailInput.value,JSON.stringify(userdetails));
        
        
        

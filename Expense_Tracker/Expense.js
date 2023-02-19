@@ -40,6 +40,11 @@ function edit(i){
         income.checked = false;
         }
     tnxAmountHolder.value = transaction.amount;
+
+
+    axios.patch('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/1')
+    .then(res=>showOutput(res))
+    .catch(error=>console.log(error));
     
  
 }
@@ -156,6 +161,18 @@ saveButton.addEventListener("click",() =>{
 
     
     
+})
+
+window.addEventListener('DOMContentLoaded',()=>{
+    axios.get('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction')
+    .then((response)=>{
+        for (var i=0; i<response.data.length; i++){
+            render(response.data[i])
+        }
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
 })
 
 

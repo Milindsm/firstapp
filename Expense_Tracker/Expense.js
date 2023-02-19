@@ -23,6 +23,10 @@ let currentBalance = 0;
 
 let editIndex = -1;
 
+
+
+
+
 function edit(i){
     transaction = listOfTransactions[i]
     cancelButton.style.display= "block";
@@ -43,6 +47,10 @@ function edit(i){
 function del(i){
     listOfTransactions = listOfTransactions.filter((e,index) => i!= index);
     render();
+
+    axios.delete('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/1')
+    .then(res=>showOutput(res))
+    .catch(error=>console.log(error));
 
 }
 
@@ -141,14 +149,15 @@ saveButton.addEventListener("click",() =>{
     render();
     saveData();
 
+    
     axios.post('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction',transaction)
     .then(res=>res)
     .catch(error=>console.log(error));
 
-
     
     
 })
+
 
 
 

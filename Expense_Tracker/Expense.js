@@ -42,7 +42,7 @@ function edit(i){
     tnxAmountHolder.value = transaction.amount;
 
 
-    axios.patch('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/1')
+    axios.patch(`https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/${i}`)
     .then(res=>showOutput(res))
     .catch(error=>console.log(error));
     
@@ -52,8 +52,8 @@ function edit(i){
 function del(i){
     listOfTransactions = listOfTransactions.filter((e,index) => i!= index);
     render();
-
-    axios.delete('https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/1')
+ 
+    axios.delete(`https://crudcrud.com/api/489962127ce746f7a8d64c8d5508516f/Transaction/${i}`)
     .then(res=>showOutput(res))
     .catch(error=>console.log(error));
 

@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller_Admin</title>
+    <link rel="stylesheet" type="text/css" href="seller_admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+ </head>
+ <body>
+
+    <div class="container">
+        <form action="#" id="form">
+            <label for="order">Choose Category:</label>
+
+  <select name="order" id="order">
+    <option value="Electronics">Electronics</option>
+    <option value="Food Items">Food Items</option>
+    <option value="Grocery">Grocery</option>
+    <option value="Kitchen">Kitchen</option>
+  </select>
+  <br><br>
+            <label for="name">Product</label>
+            <input type="text" id="name" name="name" placeholder="Product">
+            <label for="number">Price</label>
+            <input type="number" id="number" name="number" placeholder="Price">
+
+            <input type="submit" value="Submit Form" id="submitBtn">
+        </form>
+
+        <div id="show">
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="seller_admin.js"></script>
+ </body>
+ </html>
